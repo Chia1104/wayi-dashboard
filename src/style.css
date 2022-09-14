@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .w-container {
+    @apply
+    container mx-auto
+  }
+
+  .w-hover-link {
+    @apply
+    hover:border-b-2 border-primary transition ease-in-out
+  }
+
+  .w-description {
+    @apply
+    text-lg dark:text-gray-400 transition ease-in-out
+  }
+
+  .w-bg-primary {
+    @apply
+    bg-white/80 backdrop-blur-md transition ease-in-out
+  }
+
+  .w-bg-secondary {
+    @apply
+    bg-gray-100/80 backdrop-blur-md transition ease-in-out
+  }
+
+  .w-border-primary {
+    @apply
+    border-gray-800 dark:border-gray-800
+  }
+
+  .w-text-purple-to-blue {
+    @apply
+    text-transparent bg-clip-text bg-gradient-to-r from-[#D8B4FE] to-[#818CF8]
+  }
+
+  .w-bg-gradient-purple-to-blue {
+    @apply
+    bg-gradient-to-r from-[#D8B4FE] to-[#818CF8]
+  }
+
+  .w-text-purple-to-pink {
+    @apply
+    text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600
+  }
+
+  .w-bg-gradient-purple-to-pink {
+    @apply
+    bg-gradient-to-r from-purple-400 to-pink-600
+  }
+
+  .w-text-green-to-purple {
+    @apply
+    text-transparent bg-clip-text bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]
+  }
+
+  .w-bg-gradient-green-to-purple {
+    @apply
+    bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]
+  }
+
+  .w-text-yellow-to-pink {
+    @apply
+    text-transparent bg-clip-text bg-gradient-to-r from-[#F9C851] via-[#FCA5A5] to-[#FECACA]
+  }
+
+  .w-bg-gradient-yellow-to-pink {
+    @apply
+    bg-gradient-to-r from-[#F9C851] via-[#FCA5A5] to-[#FECACA]
+  }
+
+  .w-bg-gradient-primary-to-t {
+    @apply
+    bg-gradient-to-t from-[rgba(24,0,50,0)] via-[rgba(24,0,50,0)] to-[#180032]
+  }
+
+  .w-bg-gradient-primary-to-b {
+    @apply
+    bg-gradient-to-b from-[rgba(24,0,50,0)] via-[rgba(24,0,50,0)] to-[#180032]
+  }
+
+  .w-button-primary {
+    @apply
+    bg-gray-200 rounded-full drop-shadow-lg text-white hover:bg-secondary transition ease-in-out flex justify-center items-center px-3 py-1
+  }
+
+  .w-button-secondary {
+    @apply
+    bg-gray-200/80 backdrop-blur-md transition ease-in-out rounded px-5 py-3 text-2xl
+  }
+
+  .w-footer {
+    @apply
+    flex py-8 border-t-[1px] border-solid justify-center items-center border-gray-200 dark:border-gray-800 bg-white/80 text-sec-text dark:text-white dark:bg-dark/80 backdrop-blur-md
+  }
+
+  .w-main {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @apply text-gray-600
+  }
+
+  .w-title {
+    @apply text-4xl my-2
+  }
+
+  .w-subtitle {
+    @apply text-2xl
+  }
+
+  .w-description {
+    @apply text-lg
+  }
+
+  .w-link {
+    @apply w-link-underline w-link-underline-secondary
+  }
+
+  .w-link-active {
+    border-bottom-width: 0;
+    background-size: 100% 3px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .2s ease-in-out;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#4bf4e0, #4bf4e0)
+  }
+
+  .w-link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+    background-size: 0 3px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .2s ease-in-out;
+  }
+
+  .w-link-underline-secondary {
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#4bf4e0, #4bf4e0)
+  }
+
+  .w-link-underline:hover {
+    background-size: 100% 3px;
+    background-position: 0 100%
+  }
+
+  .w-text-bg-primary-half {
+    background-image: linear-gradient(transparent 60%, rgba(248,28,229,0.65) 55%);
+  }
+
+  .w-text-bg-sec-half {
+    background-image: linear-gradient(transparent 60%, #4bf4e0 55%);
+  }
+
+  .w-text-bg-info-half {
+    background-image: linear-gradient(transparent 60%, #8086ba 55%);
+  }
+
+  .w-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    @apply bg-white/90 dark:bg-dark/90 backdrop-blur-sm transition ease-in-out
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  color: #fff;
+  @apply bg-primary
+}
